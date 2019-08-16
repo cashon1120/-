@@ -1,0 +1,110 @@
+.header {
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  width: 100%;
+  transition: color .3s ease;
+  z-index: 100;
+  font-size: 18px;
+
+  &:hover {
+    background: #2b3033;
+  }
+
+  .logo {
+    width: 130px;
+
+    div {
+      font-size: 0;
+      padding-right: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    height: 77px;
+    line-height: 77px;
+    padding: 0 30px;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+    transition: color .3s ease;
+
+    &:hover,
+    &.active {
+      color: #0af;
+      border-bottom: 3px solid #0af;
+    }
+  }
+
+  .nav-sub {
+    position: absolute;
+    background: #21262a;
+    width: 100%;
+    left: 0;
+    top: 80px;
+    text-align: center;
+    height: 524px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    padding-top: 30px;
+
+    .container {
+      overflow: auto;
+    }
+
+    .sub-list {
+      float: left;
+      width: 285px;
+      margin-right: 15px;
+      text-align: left;
+      font-size: 14px;
+      color: #737a7e;
+
+      a {
+        display: block;
+        height: 100%;
+        background: #2b3033;
+        padding: 16px;
+        border: 1px solid #2b3033;
+        margin-bottom: 16px;
+        color: #737a7e;
+        line-height: 1;
+        transition: all .6s;
+
+        &:hover {
+          border: 1px solid #26a0ee;
+          color: #26a0ee;
+
+          h3 {
+            color: #26a0ee;
+
+          }
+        }
+
+        h3 {
+          padding-bottom: 10px;
+          transition: all .6s;
+          color: #fff;
+          font-size: 14px;
+        }
+      }
+
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+
+  }
+  &.header-bg-black {
+    background: #2b3033;
+  }
+}

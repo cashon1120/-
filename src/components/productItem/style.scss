@@ -1,0 +1,90 @@
+.product {
+  float: left;
+  width: 285px;
+  height: 455px;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  margin: 20px 20px 0 0;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+
+  i {
+    display: block;
+    position: absolute;
+    width: 47px;
+    height: 29px;
+    right: 10px;
+    top: 10px;
+
+    &.icon-hot {
+      background: url(../../assets/images/icon-hot.png) no-repeat center;
+      background-size: 100% 100%;
+    }
+
+    &.icon-new {
+      background: url(../../assets/images/icon-new.png) no-repeat center 100% 100%;
+      background-size: 100% 100%;
+    }
+  }
+
+  h2 {
+    padding: 10px 0 5px 0;
+    font-size: 16px;
+  }
+
+  div {
+    padding-bottom: 10px;
+    height: 112px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 220px;
+    height: 220px;
+    margin: auto;
+  }
+
+  &:hover {
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .price {
+    height: auto;
+    span:first-child {
+      color: red;
+      font-size: 14px;
+    }
+
+    span:nth-child(2) {
+      color: red;
+      font-size: 18px;
+    }
+
+    span:nth-child(3) {
+      margin-left: 5px;
+      color: #999;
+      font-size: 12px;
+    }
+  }
+
+  a {
+    display: block;
+    color: #fff;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #009cff;
+    margin-top: 5px;
+
+    &:hover {
+      background-color: #108ddc;
+      transition: all .6s;
+    }
+  }
+}
+
+.product:nth-child(4n) {
+  margin-right: 0;
+}

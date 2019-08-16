@@ -1,0 +1,64 @@
+.banner-service {
+  height: 600px;
+  position: relative;
+
+  li {
+    height: 600px;
+    background-position: center center;
+
+    .container {
+      color: #fff;
+      padding-top: 150px;
+
+      .text-1 {
+        font-size: 50px;
+        line-height: 0;
+      }
+
+      .text-2 {
+        font-size: 20px;
+        line-height: 20px;
+        width: 520px;
+        font-size: 14px;
+        color: #c8cbcf;
+        line-height: 1.5;
+      }
+
+      .link {
+        padding-top: 30px;
+        a {
+          display: inline-block;
+          height: 38px;
+          line-height: 38px;
+          margin-right: 20px;
+          color: #00aaff;
+          text-align: center;
+          transition: all .6s;
+          &:hover {
+            color: #fff;
+          }  
+          &:first-child {
+            background: #00aaff;
+            border: 1px solid #00aaff;
+            color: #fff;
+            width: 118px;
+            &:hover{
+              background: #0099e5;
+            }
+          }
+
+          &:nth-child(2) {
+            background: transparent;
+            border: 1px solid #919396;
+            color: #fff;
+            width: 118px;
+            &:hover{
+              background: #fff;
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+}
