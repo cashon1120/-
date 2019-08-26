@@ -15,7 +15,7 @@
   }
 
   .logo {
-    width: 130px;
+    width: 220px;
 
     div {
       font-size: 0;
@@ -61,6 +61,8 @@
       overflow: auto;
     }
 
+
+
     .sub-list {
       float: left;
       width: 285px;
@@ -103,8 +105,55 @@
       }
     }
 
+    .sub-list-1 {
+      width: 100%;
+      a {
+        display: inline-block;
+        width: 24%;
+        margin-right: 1%;
+      }
+    }
+
   }
+
   &.header-bg-black {
     background: #2b3033;
+  }
+
+  .header-login {
+    text-align: right;
+
+    a {
+      display: inline-block;
+      width: 70px;
+      height: 32px;
+      line-height: 32px;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      padding: 0 10px;
+      transition: all .6s;
+    }
+
+    .login-button {
+      margin-left: 20px;
+      border: 1px solid #747577;
+      margin-right: 15px;
+      position: relative;
+      top: 1px;
+      &:hover{background: rgba(255,255,255,.1)}
+    }
+
+    .register-button {
+      width: 96px;
+      text-align: left;
+      padding-left: 35px;
+      margin-left: 14px;
+      background: url(../../assets/images/icon_register_gift.png) no-repeat 17px center;
+      background-color: #0af;
+      &:hover{
+        background-color: #089de8;
+      }
+    }
   }
 }

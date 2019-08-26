@@ -1,0 +1,39 @@
+.page-login {
+  padding-top: 110px;
+  padding-bottom: 50px;
+  background: url(../../assets/images/login_bg.jpg) no-repeat top center;
+  height: 630px;
+  .container{
+    position: relative;
+  }
+  .login-desc {
+    h2 {
+      color: #fff;
+      padding-bottom: 20px;
+    }
+
+    padding-left: 20px;
+    padding-top: 124px;
+    color: #fff;
+    font-size: 16px;
+  }
+  .login-main{
+    position: absolute;
+    right: 40px;
+    z-index: 50;
+    width: 380px;
+    top:65px;
+    box-sizing: border-box;
+    padding: 40px 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    h2{
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .login-form-button{
+      display: block;
+      width: 100%;
+    }
+  }
+}

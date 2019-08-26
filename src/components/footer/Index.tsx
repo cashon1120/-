@@ -8,7 +8,7 @@ class Footer extends React.Component {
         <div className="container flex-container flex-container-align-top">
           <div className="logo">
             <img src={logo} alt="中国长城工业集团有限公司"/>
-            <div style={{paddingLeft: 10}}>
+            <div>
             ISO9001:2008 Registered <br/>
             ISO/IEC 27001:2013 Registered
             </div>

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import {Link} from 'react-router-dom'
 import './style.scss'
 
 class ProductItem extends React.Component {
@@ -16,7 +17,7 @@ class ProductItem extends React.Component {
           <span>14999.00</span>
           <span>起</span>
         </div>
-        <a href="#">立即购买</a>
+        <Link to="/productDetail/1">立即购买</Link>
       </div>
     )
   }

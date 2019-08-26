@@ -11,6 +11,9 @@ const Home = loadable(() => import ('./pages/home/Index'))
 const Product = loadable(() => import ('./pages/product/Index'))
 const Service = loadable(() => import ('./pages/service/Index'))
 const Detail = loadable(() => import ('./pages/detail/Index'))
+const Login = loadable(() => import ('./pages/login/Index'))
+const Register = loadable(() => import ('./pages/register/Index'))
+const Solution = loadable(() => import ('./pages/solution/Index'))
 
 class App extends React.Component {
   public render() {
@@ -23,6 +26,9 @@ class App extends React.Component {
             <Route path='/product' exact={true} component={Product}/>
             <Route path='/service' exact={true} component={Service}/>
             <Route path='/productDetail/:id' exact={true} component={Detail}/>
+            <Route path='/solution' exact={true} component={Solution}/>
+            <Route path='/login' exact={true} component={Login}/>
+            <Route path='/register' exact={true} component={Register}/>
           </Switch>
           <Footer/>
         </BrowserRouter>
