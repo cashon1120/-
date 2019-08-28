@@ -4,12 +4,12 @@ import axios from 'axios'
 const request = axios.create()
 
 interface IConfig {
-  data: any
-  $skipAuthHandler: boolean,
-  url: string,
-  headers: object,
-  params: {
-    $skipAuthHandler: object
+  data?: any
+  $skipAuthHandler?: boolean,
+  url?: string | undefined,
+  headers?: object,
+  params?: {
+    $skipAuthHandler?: object
   }
 }
 
@@ -28,7 +28,7 @@ request.interceptors.request.use(
     }
     let contentType = 'application/json; charset=utf-8'
     // 导出文件时候需要用formData格式请求
-    if(config.url.indexOf('downloadFailureModel') > 0){
+    if(config.url && config.url.indexOf('downloadFailureModel') > 0){
       contentType = 'application/x-www-form-urlencoded'
     }
     config.headers = {
@@ -39,12 +39,12 @@ request.interceptors.request.use(
     }
     return config
   },
-  (error) => {
+  (error: any) => {
     return Promise.reject(error)
   }
 );
 
-request.interceptors.response.use(response => {
+request.interceptors.response.use((response:any) => {
     if (!response.data.code) {
       return response.data
     }
@@ -58,7 +58,7 @@ request.interceptors.response.use(response => {
       return response
     }
   },
-  error => {
+  (error:any) => {
     const err = error.response;
     return Promise.reject(err)
   }

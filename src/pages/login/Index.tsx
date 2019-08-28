@@ -1,5 +1,9 @@
 import * as React from 'react'
-import {Form, Icon, Input, Button} from 'antd';
+// import {Form, Icon, Input, Button} from 'antd';
+import Form from 'antd/es/form';
+import Icon from 'antd/es/icon';
+import Input from 'antd/es/input';
+import Button from 'antd/es/button';
 import {Link} from 'react-router-dom'
 import './style.scss'
 interface IProps {
@@ -13,7 +17,8 @@ class Login extends React.Component < IProps, {} >{
       .form
       .validateFields((err : string, values : object) => {
         if (!err) {
-          console.log('Received values of form: ', values);
+          localStorage.setItem('islogin', 'true')
+          window.location.href = 'http://manager.sunuping.com/'
         }
       });
   };

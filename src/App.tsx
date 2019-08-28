@@ -1,7 +1,6 @@
 import * as React from 'react'
 import {Provider} from 'react-redux'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import 'antd/dist/antd.css'
 import Header from './components/header/Index'
 import Footer from './components/footer/Index'
 import loadable from './utils/loadable'
@@ -21,15 +20,17 @@ class App extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <Header/>
-          <Switch>
-            <Route path='/' exact={true} component={Home}/>
-            <Route path='/product' exact={true} component={Product}/>
-            <Route path='/service' exact={true} component={Service}/>
-            <Route path='/productDetail/:id' exact={true} component={Detail}/>
-            <Route path='/solution' exact={true} component={Solution}/>
-            <Route path='/login' exact={true} component={Login}/>
-            <Route path='/register' exact={true} component={Register}/>
-          </Switch>
+          <div style={{minHeight: 500}}>
+            <Switch>
+              <Route path='/' exact={true} component={Home}/>
+              <Route path='/product' exact={true} component={Product}/>
+              <Route path='/service' exact={true} component={Service}/>
+              <Route path='/productDetail/:id' exact={true} component={Detail}/>
+              <Route path='/solution' exact={true} component={Solution}/>
+              <Route path='/login' exact={true} component={Login}/>
+              <Route path='/register' exact={true} component={Register}/>
+            </Switch>
+          </div>
           <Footer/>
         </BrowserRouter>
       </Provider>

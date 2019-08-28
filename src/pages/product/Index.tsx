@@ -1,6 +1,6 @@
 import * as React from 'react'
 import ProductItem from '../../components/productItem/Index'
-import {Checkbox} from 'antd'
+import Checkbox from 'antd/es/checkbox';
 import './style.scss'
 
 class Product extends React.Component {

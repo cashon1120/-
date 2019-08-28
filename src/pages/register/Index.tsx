@@ -1,12 +1,11 @@
 import * as React from 'react'
-import {
-  Form,
-  Input,
-  Row,
-  Col,
-  Checkbox,
-  Button
-} from 'antd'
+
+import Form from 'antd/es/form';
+import Row from 'antd/es/row';
+import Col from 'antd/es/col';
+import Checkbox from 'antd/es/checkbox';
+import Input from 'antd/es/input';
+import Button from 'antd/es/button';
 import './style.scss'
 
 interface IProps {

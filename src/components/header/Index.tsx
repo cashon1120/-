@@ -1,6 +1,5 @@
 import * as React from 'react'
-import {withRouter} from 'react-router-dom'
-import {Link} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 
 import './style.scss'
 import logo from '../../assets/images/logo.png'
@@ -8,6 +7,7 @@ import logo from '../../assets/images/logo.png'
 interface IState {
   activeIndex : number
   changeHeaderBg : boolean
+  isLogin : boolean
 }
 interface IProps {
   location : {
@@ -19,7 +19,8 @@ class Header extends React.Component < IProps,
 IState > {
   public state = {
     activeIndex: 0,
-    changeHeaderBg: false
+    changeHeaderBg: false,
+    isLogin: false
   }
 
   public UNSAFE_componentWillReceiveProps(nextProps : IProps) {
@@ -38,13 +39,17 @@ IState > {
     if ((this.props.location.pathname.includes('product') || this.props.location.pathname.includes('solution') || this.props.location.pathname.includes('register')) && !changeHeaderBg) {
       this.setState({changeHeaderBg: true})
     }
+
+    if (localStorage.getItem('islogin') === 'true') {
+      this.setState({isLogin: true})
+    }
   }
 
   public handleChangeAcitve(index : number) {
     this.setState({activeIndex: index})
   }
   public render() {
-    const {activeIndex, changeHeaderBg} = this.state
+    const {activeIndex, changeHeaderBg, isLogin} = this.state
 
     return (
       <nav
@@ -82,16 +87,25 @@ IState > {
               onMouseEnter={this
               .handleChangeAcitve
               .bind(this, 3)}>解决方案</Link>
-            <Link
-              to="/"
+            <a
+              href="http://ng.aerobdcloud.com/?t=1566825060"
               onMouseEnter={this
               .handleChangeAcitve
-              .bind(this, 4)}>云平台</Link>
+              .bind(this, 4)}>云平台</a>
           </div>
 
           <div className="header-login">
-            <Link to="/login" className="login-button">请登录</Link>
-            <Link to="/register" className="register-button">注册有礼</Link>
+            {isLogin
+              ? 
+                <React.Fragment>
+                  <a href="http://manager.sunuping.com/" className="login-button">用户中心</a>
+                </React.Fragment>
+                :
+                <React.Fragment>
+                  <Link to="/login" className="login-button">请登录</Link>
+                  <Link to="/register" className="register-button">注册有礼</Link>
+                </React.Fragment>}
+
           </div>
 
         </div>

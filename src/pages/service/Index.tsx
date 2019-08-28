@@ -9,7 +9,7 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <Banner/>
-        <Banner/>
+        {/* <Banner/> */}
         <div className="container outer-bg-white">
           <h1 className="title">服务推荐</h1>
           <div className="flex-container recommend">
